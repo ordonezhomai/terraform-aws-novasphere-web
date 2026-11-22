@@ -25,11 +25,11 @@ resource "aws_security_group" "alb" {
 
 resource "aws_security_group" "web" {
   name        = "${var.name}-web"
-  description = "Instances ${var.name} : HTTP depuis l'ALB uniquement"
+  description = "Instances ${var.name} : HTTP depuis ALB uniquement"
   vpc_id      = var.vpc_id
 
   ingress {
-    description     = "HTTP depuis l'ALB seulement"
+    description     = "HTTP depuis ALB seulement"
     from_port       = 80
     to_port         = 80
     protocol        = "tcp"
